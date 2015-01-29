@@ -37,16 +37,16 @@
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Bio extends CI_Controller {
+class Bio extends Application {
 
 	/**
 	 * Index Page for this controller.
 	 */
 	public function index()
 	{
-		$this->load->view('bio');
-//        $this->data['pagebody'] = 'bio';
-//        $this->render();
+//		$this->load->view('bio');
+        $this->data['pagebody'] = 'bio';
+        $this->render();
 	}
 }
 
