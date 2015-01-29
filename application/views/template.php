@@ -12,10 +12,8 @@
 
     <body>
         <div id="wrapper">
-            what's up?
             <!-- logo -->
             <a href="/">
-                <img src="images/logo2.png">
                 <div id="logo">
                     <p>Logo</p>
                 </div>		
@@ -25,7 +23,7 @@
             <div id="header">
                 <svg id="title" xmlns="http://www.w3.org/2000/svg" pointer-events="none"></svg>
 
-                <a href="index">
+                <a href="/">
                     <div id="titleLink">
                         Home
                     </div>
@@ -65,9 +63,8 @@
             </div>
 
             <!-- content -->
-            <div id="content">
                 {content}
-            </div>
+
 
             <!-- footer -->
             <div id="footer">

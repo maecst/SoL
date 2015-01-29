@@ -1,39 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Blog | Sliver of Light Photography</title>
-        <link rel="stylesheet" href="style/base.css" media="screen">
-        <link rel="stylesheet" href="style/baseprint.css" media="print">
-        <link rel="icon" type="image/png" href="images/favicon.png">
-        <script language="javascript" type="text/javascript" src="js/blog.js"></script>
-    </head>
-
-    <body>
-        <div id="wrapper">
-
-            <!-- logo -->
-            <a href="index">
-                <div id="logo">
-                    <p>Logo</p>
-                </div>		
-            </a>
-
-            <!-- header -->
-            <div id="header">
-                <svg id="title" xmlns="http://www.w3.org/2000/svg" pointer-events="none"></svg>
-                    <a href="index">
-                        <div id="titleLink">
-                            Home
-                        </div>
-                    </a>
-            </div>
-
-            <!-- nav -->
-            <?php
-                include_once "navbar.php";
-            ?>
-
             <!--This div is needed to get overflow working properly.-->
             <div id="content">
             <!-- div id="blogcontainer" -->
@@ -181,9 +145,3 @@
                 </div>
 
             </div>
-
-        </div>
-
-
-    </body>
-</html>
