@@ -3,9 +3,9 @@
 
     <h2> People </h2>
     <span id="gallerynav">
-    [ <a href="places">Places</a> ] &nbsp;&nbsp;
-    [ <a href="nature">Nature</a> ] &nbsp;&nbsp;
-    [ <a href="blackwhite">Black & White</a> ]
+    [ <a href="/places">Places</a> ] &nbsp;&nbsp;
+    [ <a href="/nature">Nature</a> ] &nbsp;&nbsp;
+    [ <a href="/blackwhite">Black & White</a> ]
     </span>
     <div id="gallerycontainer">
         <a href="gallery"><div class="trans1" id="backButton"><div class="trans1"><span class="arrows">&lt;&lt;&lt;</span> Back</div></div></a>

@@ -2,9 +2,9 @@
 <div id="content">
     <h2>Nature</h2>
     <span id="gallerynav">
-        [ <a href="people">People</a> ] &nbsp;&nbsp;
-        [ <a href="places">Places</a> ] &nbsp;&nbsp;
-        [ <a href="blackwhite">Black & White</a> ]
+        [ <a href="/people">People</a> ] &nbsp;&nbsp;
+        [ <a href="/places">Places</a> ] &nbsp;&nbsp;
+        [ <a href="/blackwhite">Black & White</a> ]
     </span>
 
     <div id="gallerycontainer">
