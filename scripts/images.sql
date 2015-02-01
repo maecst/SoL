@@ -28,7 +28,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `photos` (
   `id` int(5) NOT NULL AUTO_INCREMENT,
-  `filename` varchar(64) NOT NULL,
+  `filename` varchar(32) NOT NULL,
+  `foldername` varchar(32) NOT NULL,
   `category` varchar(32) NOT NULL,
   `description` varchar(128),
   `location` varchar(128) NOT NULL,
@@ -42,18 +43,18 @@ CREATE TABLE IF NOT EXISTS `photos` (
 --
 
 INSERT INTO `photos` 
-(`id`, `filename`, `category`, `description`, `location`, `date_taken`, `upload_date`) 
+(`id`, `filename`, `foldername`, `category`, `description`, `location`, `date_taken`, `upload_date`) 
 VALUES
-  (1,   'nature/nature001.jpg', 'Nature', NULL, 'Porteau Cove, B.C.', NULL, '2015-01-01')
-, (2,   'nature/nature002.jpg', 'Nature', NULL, 'Porteau Cove, B.C.', NULL, '2015-01-01')
-, (3,   'nature/nature003.jpg', 'Nature', NULL, 'Porteau Cove, B.C.', NULL, '2015-01-01')
-, (4,   'nature/nature004.jpg', 'Nature', 'Pacific Rim National Park', 'Vancouver Island, B.C.', NULL, '2015-01-01')
-, (5,   'nature/nature005.jpg', 'Nature', 'Pacific Rim National Park', 'Vancouver Island, B.C.', NULL, '2015-01-01')
-, (6,   'nature/nature006.jpg', 'Nature', 'Pacific Rim National Park', 'Vancouver Island, B.C.', NULL, '2015-01-01')
-, (7,   'nature/nature007.jpg', 'Nature', 'Grouse Mountain', 'North Vancouver, B.C.', NULL, '2015-01-01')
-, (8,   'nature/nature008.jpg', 'Nature', 'Pacific Rim National Park', 'Vancouver Island, B.C.', NULL, '2015-01-01')
-, (9,   'nature/nature009.jpg', 'Nature', 'Multnomah Falls', 'Columbia River Gorge, OR', NULL, '2015-01-01')
-, (10,  'nature/nature010.jpg', 'Nature', 'Maligne Falls', 'near Jasper, AB', NULL, '2015-01-01')
+  (1,   'nature001.jpg', 'nature', 'Nature', NULL, 'Porteau Cove, B.C.', NULL, '2015-01-01')
+, (2,   'nature002.jpg', 'nature', 'Nature', NULL, 'Porteau Cove, B.C.', NULL, '2015-01-01')
+, (3,   'nature003.jpg', 'nature', 'Nature', NULL, 'Porteau Cove, B.C.', NULL, '2015-01-01')
+, (4,   'nature004.jpg', 'nature', 'Nature', 'Pacific Rim National Park', 'Vancouver Island, B.C.', NULL, '2015-01-01')
+, (5,   'nature005.jpg', 'nature', 'Nature', 'Pacific Rim National Park', 'Vancouver Island, B.C.', NULL, '2015-01-01')
+, (6,   'nature006.jpg', 'nature', 'Nature', 'Pacific Rim National Park', 'Vancouver Island, B.C.', NULL, '2015-01-01')
+, (7,   'nature007.jpg', 'nature', 'Nature', 'Grouse Mountain', 'North Vancouver, B.C.', NULL, '2015-01-01')
+, (8,   'nature008.jpg', 'nature', 'Nature', 'Pacific Rim National Park', 'Vancouver Island, B.C.', NULL, '2015-01-01')
+, (9,   'nature009.jpg', 'nature', 'Nature', 'Multnomah Falls', 'Columbia River Gorge, OR', NULL, '2015-01-01')
+, (10,  'nature010.jpg', 'nature', 'Nature', 'Maligne Falls', 'near Jasper, AB', NULL, '2015-01-01')
 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
