@@ -15,7 +15,7 @@ will disappear and all the photos with tags to the search keywords will be displ
 in order of relevance. Thus the user's end goal of finding specific related photos
 would be achieved.
 
-2.Blog Tags
+2. Blog Tags
 
 This user is browsing the website looking at blog posts. Not all of them interest
 the user. They want to filter out the ones that do not interest them while 
@@ -24,7 +24,7 @@ On the blog page there will be a filter of some sort that allows a user to selec
 or deselect tags. This will filter the bogs to only include the selected tags, 
 allowing for quick sorting and maintaining user interest and site flow.
 
-3.Contact the Photographer
+3. Contact the Photographer
 
 This user enjoys the work displayed on the site and wishes to get in contact with
 the photographer. Coming from any page, the user is able to click on the Contact
