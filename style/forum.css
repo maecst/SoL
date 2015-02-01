@@ -1,0 +1,25 @@
+* {
+	font-family: 'Calibri', 'Trebuchet MS', Arial, sans-serif;
+	}
+
+a {
+	text-decoration: none;
+	color: black;
+	}
+
+#forumHeader td {
+	background: #900;
+	color: white;
+	}
+	
+#forumFooter td{
+	background: #900;
+	}
+
+#forumFooter a {
+	color: white;
+	}
+
+table {
+	border-collapse: collapse;
+	}
