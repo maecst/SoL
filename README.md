@@ -12,14 +12,17 @@
 NOTES:
 ================================================================================
 
-We created a database and populated the Photos table with 10 nature photos.  The
+1) We created a database and populated the Photos table with 10 nature photos.  The
 nature view now shows those dynamically pulled photos.  Because we are not sure
 we will be storing the photos in a table on the database -- you had mention 
 pulling them from a folder location instead -- we did not implement this in our
 other 3 subgallery views.
 
-If you like, you can run the SQL script that generates the database and table.
+2) If you like, you can run the SQL script that generates the database and table.
 It is located in the SoL/scripts/ folder.
+
+3) The original web site has been put entirely inside the SoL/public/ folder or 
+you can view the hosted version at www.cstprogram.ca/sliver
 
 
 
