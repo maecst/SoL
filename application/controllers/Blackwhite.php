@@ -44,6 +44,7 @@ class Blackwhite extends Application {
 	 */
 	public function index()
 	{
+            //Renders pagebody.
             $this->data['pagebody'] = 'blackwhite';
             $this->render();
 	}
