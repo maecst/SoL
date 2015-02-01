@@ -72,7 +72,7 @@ class Welcome extends Application {
 
                $this->table->set_template($params);
 
-               $rows = $this->table->make_columns($cells, 3);
+               $rows = $this->table->make_columns($cells, 6);
                $this->data['images'] = $this->table->generate($rows);
 
                $this->data['pagebody'] = 'welcome';
