@@ -1,7 +1,30 @@
-# SoL
-COMP 4711 Assignment Team SoL
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# COMP 4711 - Assignment #1 - Team SoL
+#
+# Members:
+#       Michael Chodolak
+#       Stephanie LaChapelle
+#       Henry Kit Tan
+#       Mae Yee
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use cases:
+
+NOTES:
+================================================================================
+
+We created a database and populated the Photos table with 10 nature photos.  The
+nature view now shows those dynamically pulled photos.  Because we are not sure
+we will be storing the photos in a table on the database -- you had mention 
+pulling them from a folder location instead -- we did not implement this in our
+other 3 subgallery views.
+
+If you like, you can run the SQL script that generates the database and table.
+It is located in the SoL/scripts/ folder.
+
+
+
+USE CASES:
+================================================================================
 
 1. Gallery/Blog Search
 
@@ -24,6 +47,7 @@ On the blog page there will be a filter of some sort that allows a user to selec
 or deselect tags. This will filter the bogs to only include the selected tags, 
 allowing for quick sorting and maintaining user interest and site flow.
 
+
 2. Gallery View
 
 Actor: User
@@ -31,6 +55,7 @@ Actor: User
 The user enters the site looking to view the photos by the photographer. Starting
 at the home page they navigate to the Gallery page using the navigation bar. Then
 they may select sub galleries to view photos. Photos are loaded dynamically.
+
 
 3. Blog View
 
@@ -41,8 +66,23 @@ at the home page they navigate to the Blog page using the navigation bar. Then
 they may view the blogs and add comments using facebook/twitter accounts. 
 Blogs are loaded dynamically.
 
+
 4. Admin model
 
-Actor: Admin
+Actor: Admin/owner of web site
 
-Monitor user posts and other user actions.
+The admin/owner can login to an admin module and from there can monitor user posts
+add/delete new blog posts and photos, and edit existing blog posts.
+
+
+
+SITE MAP:
+================================================================================
+
+You can find a PDF with a diagram showing how the site (from the user/viewer)
+standpoint is laid out.  The admin side would have a different UI and controls.
+
+The PDF is located inside the main SoL directory and called "SoL_sitemap.pdf".
+Or if you prefer, you can click on the link below to view it:
+
+    https://github.com/SoL-Photo/SoL/blob/master/SoL_sitemap.pdf
