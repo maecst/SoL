@@ -41,43 +41,37 @@ class Welcome extends Application {
 
 	/**
 	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
+    {
+
+        //Grabs the 6 newest photos from the database.
+        $pix = $this->photos->newest();
+            
+        //Parses the database information into a cell array.
+        foreach($pix as $picture)
         {
-       //  $this->load->view('welcome');
-
-               $pix = $this->photos->newest();
-               foreach($pix as $picture)
-               {
-                   $cells[] = $this->parser->parse('_cell', (array) $picture, true);
-               }
-               $this->load->library('table');
-               $params = array(
-                   'table_open' => '<a class="gallery">',
-                   'cell_start' => '<td class="oneimage">',
-                   'cell_alt_start' => '<td class="oneimage">'
-               );
-
-               $this->table->set_template($params);
-
-               $rows = $this->table->make_columns($cells, 6);
-               $this->data['images'] = $this->table->generate($rows);
-
-               $this->data['pagebody'] = 'welcome';
-               $this->render();
+            $cells[] = $this->parser->parse('_cell', (array) $picture, true);
         }
+        
+        //Sets up and puts the picture information into a link.
+        $this->load->library('table');
+        $params = array(
+            'table_open' => '<a class="gallery">',
+            'cell_start' => '<td class="oneimage">',
+            'cell_alt_start' => '<td class="oneimage">'
+        );
+
+        $this->table->set_template($params);
+        $rows = $this->table->make_columns($cells, 6);
+        
+        //Generates pictures in the location.
+        $this->data['images'] = $this->table->generate($rows);
+
+        //Renders body.
+        $this->data['pagebody'] = 'welcome';
+        $this->render();
+    }
 }
 
 /* End of file welcome.php */

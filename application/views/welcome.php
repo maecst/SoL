@@ -1,6 +1,12 @@
 <!-- content -->
 <div id="content">
     <div id="photo"></div>
-    <h1>Recent Images:<br>
-    {images}</h1>
+    <br>
+    <br>
+    <h2>Recent Photos 
+        <br>
+        <br>
+        {images}
+    </h2>
+
 </div>
