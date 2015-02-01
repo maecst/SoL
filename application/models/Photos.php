@@ -20,7 +20,7 @@ class Photos extends CI_Model {
     function newest() {
         
         $this->db->order_by("id", "desc");
-        $this->db->limit(3);
+        $this->db->limit(6);
         $query = $this->db->get('photos');
         return $query->result_array();
         
