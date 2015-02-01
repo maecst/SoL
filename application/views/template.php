@@ -6,8 +6,19 @@
         <link rel="stylesheet" href="style/base.css" media="screen">
         <link rel="stylesheet" href="style/baseprint.css" media="print">
         <link rel="icon" type="image/png" href="images/favicon.png">
-        <script src="js/jquery-1.10.2.min.js"></script>
+        
+        <script language="javascript" type="text/javascript" src="js/blog.js"></script>
+
+<!--    Not sure these scripts are needed...    
         <script src="js/lightbox-2.6.min.js"></script>
+        <script src="js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>        
+-->
+ 
+        <!-- Slimbox2 scripts & style -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/slimbox2.js"></script>
+        <link rel="stylesheet" href="style/slimbox2.css" type="text/css" media="screen" />
     </head>
 
     <body>
