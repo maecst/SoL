@@ -55,11 +55,29 @@ class Welcome extends Application {
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-	{
-            //Renders pagebody.
-            $this->data['pagebody'] = 'welcome';
-            $this->render();
-	}
+        {
+       //  $this->load->view('welcome');
+
+               $pix = $this->photos->newest();
+               foreach($pix as $picture)
+               {
+                   $cells[] = $this->parser->parse('_cell', (array) $picture, true);
+               }
+               $this->load->library('table');
+               $params = array(
+                   'table_open' => '<a class="gallery">',
+                   'cell_start' => '<td class="oneimage">',
+                   'cell_alt_start' => '<td class="oneimage">'
+               );
+
+               $this->table->set_template($params);
+
+               $rows = $this->table->make_columns($cells, 6);
+               $this->data['images'] = $this->table->generate($rows);
+
+               $this->data['pagebody'] = 'welcome';
+               $this->render();
+        }
 }
 
 /* End of file welcome.php */
