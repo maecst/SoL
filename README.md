@@ -32,7 +32,7 @@ The user enters the site looking to view the photos by the photographer. Startin
 at the home page they navigate to the Gallery page using the navigation bar. Then
 they may select sub galleries to view photos. Photos are loaded dynamically.
 
-2. Blog View
+3. Blog View
 
 Actor: User
 
@@ -40,3 +40,9 @@ The user enters the site looking to view the blogs by the photographer. Starting
 at the home page they navigate to the Blog page using the navigation bar. Then
 they may view the blogs and add comments using facebook/twitter accounts. 
 Blogs are loaded dynamically.
+
+4. Admin model
+
+Actor: Admin
+
+Monitor user posts and other user actions.
