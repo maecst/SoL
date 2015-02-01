@@ -44,6 +44,7 @@ class Places extends Application {
 	 */
 	public function index()
 	{
+            //Renders pagebody.
             $this->data['pagebody'] = 'places';
             $this->render();
 	}

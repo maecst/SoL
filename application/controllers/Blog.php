@@ -44,9 +44,9 @@ class Blog extends Application {
 	 */
 	public function index()
 	{
-//		$this->load->view('blog');
-        $this->data['pagebody'] = 'blog';
-        $this->render();
+            //Renders pagebody.
+            $this->data['pagebody'] = 'blog';
+            $this->render();
 	}
 }
 

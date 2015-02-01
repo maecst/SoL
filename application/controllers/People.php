@@ -44,6 +44,7 @@ class People extends Application {
 	 */
 	public function index()
 	{
+            //Renders pagebody.
             $this->data['pagebody'] = 'people';
             $this->render();
 	}

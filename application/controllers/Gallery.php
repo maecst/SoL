@@ -44,9 +44,9 @@ class Gallery extends Application {
 	 */
 	public function index()
 	{
-//		$this->load->view('gallery');
-        $this->data['pagebody'] = 'gallery';
-        $this->render();
+            //Renders pagebody.
+            $this->data['pagebody'] = 'gallery';
+            $this->render();
 	}
 }
 
