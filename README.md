@@ -6,6 +6,9 @@
 #       Stephanie LaChapelle
 #       Henry Kit Tan
 #       Mae Yee
+#
+# Repo:
+#       https://github.com/SoL-Photo/SoL
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -22,7 +25,7 @@ other 3 subgallery views.
 It is located in the SoL/scripts/ folder.
 
 3) The original web site has been put entirely inside the SoL/public/ folder or 
-you can view the hosted version at www.cstprogram.ca/sliver
+you can view the hosted version at http://www.cstprogram.ca/sliver
 
 
 
