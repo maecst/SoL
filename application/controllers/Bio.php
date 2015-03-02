@@ -44,9 +44,9 @@ class Bio extends Application {
 	 */
 	public function index()
 	{
-//		$this->load->view('bio');
-        $this->data['pagebody'] = 'bio';
-        $this->render();
+            //Renders pagebody.
+            $this->data['pagebody'] = 'bio';
+            $this->render();
 	}
 }
 
