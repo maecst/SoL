@@ -43,15 +43,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @author Stephanie
  */
 class Signin extends Application {
-/**
-	 * Index Page for this controller.
-	 */
-	public function index()
-	{
-            //Renders pagebody.
-            $this->data['pagebody'] = 'signin';
-            $this->render();
-	}
+    /**
+     * Index Page for this controller.
+     */
+    public function index()
+    {
+        //Renders pagebody.
+        $this->data['pagebody'] = 'signin';
+        $this->render();
+    }
 }
 
 /* End of file signin.php */
