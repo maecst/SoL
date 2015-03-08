@@ -14,7 +14,7 @@ class Folders extends MY_Model {
     
     //retrun all folder names, alphabetically
     function all() {
-        $this->db->order_by("foldername");
+        $this->db->distinct();
         $this->db->select('foldername');
         $query = $this->db->get('photos');
         return $query->result_array();
