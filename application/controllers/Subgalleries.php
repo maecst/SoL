@@ -46,7 +46,45 @@ class Subgalleries extends Application {
         $this->render();
     }
     
+    public function blackwhite(){
+        //Grabs photo information from database and puts it into array.
+        $this->db->where('category', 'Black & White');
+        $query = $this->db->get("photos");
+        $pictures = $query->result_array();
+
+        //Parses the database information into a cell array.
+        foreach ($pictures as $picture) {
+            $cells[] = $this->parser->parse('_cell', (array) $picture, true);
+        }
+
+        //Sets up and puts the picture information into a link.
+        $this->load->library('table');
+        $parms = array(
+            'table_open' => '<a class="gallery">',
+            "cell_start" => '<td class="oneimage">',
+            "cell_alt_start" => '<td class="oneimage">'
+            );
+        $this->table->set_template($parms);
+
+        $rows = $this->table->make_columns($cells, 6);
+
+        //Generates pictures in the location.
+        $this->data['thetable'] = $this->table->generate($rows);
+        
+        $this->data['title'] = "Black & White";
+        $this->data['firstLocation'] = "people";
+        $this->data['firstName'] = "People";
+        $this->data['secondLocation'] = "places";
+        $this->data['secondName'] = "Places";
+        $this->data['thirdLocation'] = "nature";
+        $this->data['thirdName'] = "Nature";
+        
+        //Renders body.
+        $this->data['pagebody'] = 'subgalleries';
+        $this->render();
+    }
     
+   
    
 }
 
