@@ -85,6 +85,11 @@ if (!defined('APPPATH'))
                             <a href="/contact"><p class="link">Contact</p></a>
                         </div>
                     </li>
+                    <li>
+                        <div class="navbutton">
+                            <a href="signin#signInContainer"><p class="link">Sign In</p></a>
+                        </div>
+		</li>
                 </ul>
             </div>
 
