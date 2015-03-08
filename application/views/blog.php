@@ -7,7 +7,9 @@
     <!--Content(uses blogcontent id instead of content id)-->
     <div id="blogcontent">
 
-
+        <div id="blogpost">
+            {post}
+        </div>
         <!--Blog post sample 1: table -->
         <div class="blogpost">
 
