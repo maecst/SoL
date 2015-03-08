@@ -9,11 +9,12 @@ class Folders extends MY_Model {
     
     //constructor
     function __construct() {
-        parent::__construct('folders', 'id');
+        parent::__construct('photos', 'id');
     }
     
     //retrun all folder names, alphabetically
     function all() {
+        $this->db->order_by("foldername", "asc");
         $this->db->distinct();
         $this->db->select('foldername');
         $query = $this->db->get('photos');
