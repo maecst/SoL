@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(128) NOT NULL,
   `password` varchar(128) NOT NULL,
   `confirmpass` varchar(128) NOT NULL,
-  `role` varchar(32) NOT NULL,  --will limit to admin or user for now
+  `role` varchar(32) DEFAULT 'USER',  --will limit to admin or user for now
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT = 1000;
 
@@ -44,11 +44,11 @@ CREATE TABLE IF NOT EXISTS `users` (
 INSERT INTO `users` 
 (`id`, `firstname`, `lastname`, `email`, `password`, `role`) 
 VALUES
-  (1   'Henry', 'Tan', 'hkitannn@gmail.com', 'totallyencryptedpassword', 'ADMIN')
+  (1   'Henry', 'Tan', 'hkitannn@gmail.com', 'totallyencryptedpassword', 'USER')
 , (2   'Mae', 'Yee', 'mae.cst@hotmail.com', 'sliveroflight', 'ADMIN')
-, (3   'Michael', 'Chodolak', 'chodolak@gmail.com', 'damnthatsinteresting', 'ADMIN')
-, (4   'Stephanie', 'Lachapelle', 'steph-lachapelle@hotmail.com', 'vidyagames', 'ADMIN')
-, (5   'Jim', 'Parry', 'jlparry@jlparry.com', 'codeignilumminati', 'ADMIN')
+, (3   'Michael', 'Chodolak', 'chodolak@gmail.com', 'damnthatsinteresting', 'USER')
+, (4   'Stephanie', 'Lachapelle', 'steph-lachapelle@hotmail.com', 'vidyagames', 'USER')
+, (5   'Jim', 'Parry', 'jlparry@jlparry.com', 'codeignilumminati', 'USER')
 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
