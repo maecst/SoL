@@ -254,9 +254,10 @@ line between itself and #content.*/
 #footer {
 	border-top: 1px solid #bbbbbb;
 	width: 400px;
-	margin: 5px auto 0;
+	height: 400px;
+	margin-top: 5px;
+	margin: 0 auto;
 	color: #999;
-    vertical-align: bottom;
 }
 
 /* individual selector for <p> elements just in case we want to add other elements
