@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS `photos` (
   `category` varchar(32) NOT NULL,
   `description` varchar(128),
   `location` varchar(128) NOT NULL,
-  `date_taken` varchar(16),
+  `date_taken` varchar(32),
   `upload_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;

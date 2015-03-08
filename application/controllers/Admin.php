@@ -25,7 +25,7 @@ class Admin extends Application {
        $this->present($photo);
     }
     
-    // present a quotation for adding/editing function
+    // present a photo for adding/editing function
     function present($photo) {
         
         // format any errors
@@ -38,15 +38,16 @@ class Admin extends Application {
         
         // present quote info
 
-        
+        $today = date("Y-m-d");
         $this->data['message'] = $message;
-        $this->data['f_pid'] = makeTextField('ID#', 'id', $photo->id, 
+        $this->data['f_pid'] = makeTextField('Photo ID #', 'id', $photo->id, 
                 "Unique quote identifier, system-assigned", 10, 10, true);
-        $this->data['f_upload_date'] = makeTextField('Upload Date', 'upload_date', $photo->upload_date);
+        
+        $this->data['f_upload_date'] = makeTextField('Upload Date (YYYY-MM-DD)', 'upload_date', $today, '', 19);
         $this->data['f_upload_file'] = makeTextField('Upload Photo', 'filename', $photo->filename);
-        $this->data['f_description'] = makeTextField('Photo Description', 'description', $photo->description);
-        $this->data['f_location'] = makeTextField('Where Photo was Taken', 'location', $photo->location);
-        $this->data['f_date_taken'] = makeTextField('When Photo was Taken', 'date_taken', $photo->date_taken);
+        $this->data['f_description'] = makeTextField('Photo Description (max 128 characters)', 'description', $photo->description, '', 128, 45);
+        $this->data['f_location'] = makeTextField('Where Photo was Taken (e.g. Stanley Park, Vancouver, B.C.)', 'location', $photo->location, '', 128, 45);
+        $this->data['f_date_taken'] = makeTextField('When Photo was Taken (e.g. September 1, 2000)', 'date_taken', $photo->date_taken, '', 32, 32);
         $this->data['f_folder'] = makeTextField('Folder Name', 'folder', $photo->foldername);
         $this->data['f_category'] = makeTextField('Gallery Name', 'category', $photo->category);
         
