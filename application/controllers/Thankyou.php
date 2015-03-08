@@ -44,7 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 
 /**
- * Description of Thankyou
+ * Thankyou Controller
  *
  * @author Stephanie
  */
@@ -55,10 +55,10 @@ class Thankyou extends Application {
     public function index()
     {
         //Renders pagebody.
-        $this->data['pagebody'] = 'signin';
+        $this->data['pagebody'] = 'thankyou';
         $this->render();
     }
 }
 
-/* End of file signin.php */
-/* Location: ./application/controllers/Signin.php */
+/* End of file thankyou.php */
+/* Location: ./application/controllers/Thankyou.php */
