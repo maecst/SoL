@@ -1,17 +1,12 @@
 <?php
 
+/**
+ * This is a "CMS" model for blogposts.
+ *
+ * @author Mae
+ */
 class Photos extends MY_Model {
-    
-//    var $upload_date = '';
-//    var $photo_id = '';
-//    var $filename = '';
-//    var $thumbnail = '';
-//    var $description = '';
-//    var $location = '';
-//    var $date_taken = '';
-//    var $folder = '';
-//    var $category = '';
-    
+       
     // constructor
     function __construct() {
         parent::__construct('photos', 'id');

@@ -1,10 +1,12 @@
 <div id="content">
 
     <h2> Add a New Photo </h2>
+    
     <div class="row">
-        <div class="errors">{message}</div>
         <br>
-        <form action="/admin/confirm" method="post">
+        <div class="errors">{message}</div>
+
+        <form action="/admin/submit_photo" method="post">
             {f_pid}
             {f_upload_date}
             {f_upload_file}
@@ -14,7 +16,8 @@
             {f_folder}
             {f_category}
 
-            {f_photo_submit}
+            {btn_photo_submit}
         </form>
     </div>
+    
 </div>
