@@ -10,12 +10,11 @@ class Admin extends Application {
     function __construct() {
         parent::__construct();
         $this->load->helper('formfields');
-        $this->load->library('upload');
     }
      
     function index() {
         $this->data['pagebody'] = 'admin';
-        $this->data['title'] = 'Admin Page';
+        $this->data['pagetitle'] = 'Admin Page';
         $this->data['photos'] = $this->photos->all();
         $this->data['posts'] = $this->posts->all();
         $this->render();
@@ -25,6 +24,12 @@ class Admin extends Application {
     function add_photo() {
        $photo = $this->photos->create();
        $this->present_photo($photo);
+    }
+    
+    function edit_photo() {
+        $photo = $this->photos->get();
+        $this->photos->update();
+        $this->present_photo($photo);
     }
     
     // present a photo for adding/editing function
@@ -46,13 +51,26 @@ class Admin extends Application {
             'people'     => 'People',
             'places'     => 'Places'
         );
+
+//        $this->upload->initialize($config);
+//        $success = $this->upload->do_upload($photo);
+//        
+//        //get profile image's save path for the db
+//        $profilePhoto = "";
+//        if($success){
+//            $fullPath = $this->upload->data('full_path');
+//            $fileName = substr($fullPath, mb_strrpos($fullPath, "/")+1, strlen($fullPath));
+//            $profilePhoto = "/uploads/" . $username . "/" . $fileName;
+//        }else{
+//            $profilePhoto = $user["userpicture"];
+//        }
         
         $this->data['message'] = $message;
         $this->data['f_pid'] = makeTextField('Photo ID #', 'id', $photo->id, 
                 "Unique quote identifier, system-assigned", 10, 10, true);
         
         $this->data['f_upload_date'] = makeTextField('Upload Date (YYYY-MM-DD)', 'upload_date', $today, '', 19);
-        $this->data['f_upload_file'] = makeTextField('Upload Photo', 'filename', $photo->filename);
+        $this->data['f_upload_file'] = makeFileInputBox('Upload a Photo', 'filename', $photo->filename);
         $this->data['f_description'] = makeTextField('Photo Description (max 128 characters)', 'description', $photo->description, '', 128, 45);
         $this->data['f_location'] = makeTextField('Where Photo was Taken (e.g. Stanley Park, Vancouver, B.C.)', 'location', $photo->location, '', 128, 45);
         $this->data['f_date_taken'] = makeTextField('When Photo was Taken (e.g. September 1, 2000)', 'date_taken', $photo->date_taken, '', 32, 32);
@@ -106,6 +124,28 @@ class Admin extends Application {
         
         redirect('/admin');
     }
+    
+    function do_upload($photo) {
+        //configure uploader
+        $config['upload_path'] = '/uploads/images/' . $photo->folder . '/';
+        $config['allowed_types'] = 'gif|jpg|png';
+        $config['max_size'] = 400;
+        $config['max_width'] = 1200;
+        $config['max_height'] = 1200;
+        $config['overwrite'] = TRUE;
+        
+        $this->load->library('upload', $config);
+        
+        if (! $this->upload->do_upload()) {
+            $error = array('error' => $this->upload->display_errors());
+            $this->load->view('upload_form', $error);
+            
+        } else {
+            $data = array('upload_data' => $this->upload->data());
+            $this->load->view('upload_success', $data);
+        }
+    }
+    
     
     // add a new post to the blog
     function add_blogpost() {
