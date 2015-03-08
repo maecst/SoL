@@ -4,9 +4,13 @@
     <br>
     <br>
     <span id="gallerynav">
-        [ <a href='/admin/add'>Add a new photo</a> ] &nbsp;&nbsp;
-        [ <a href='/admin/edit'>Edit a photo</a> ] &nbsp;&nbsp;
-        [ <a href='/admin/delete'>Delete a photo</a> ]
+        [ <a href='/admin/add_photo'>Add a new photo</a> ] &nbsp;&nbsp;
+   <!-- [ <a href='/admin/edit_photo'>Edit a photo</a> ] &nbsp;&nbsp;
+        [ <a href='/admin/delete_photo'>Delete a photo</a> ] -->
+        [ <a href='/admin/add_blogpost'>Add a new blog post</a> ] &nbsp;&nbsp;
+   <!-- [ <a href='/admin/edit_blog'>Edit a blog post</a> ] &nbsp;&nbsp;
+        [ <a href='/admin/delete_blog'>Delete a blog post</a> ] -->
+        
     </span>
 
 <!--
