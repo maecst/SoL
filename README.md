@@ -1,5 +1,5 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# COMP 4711 - Assignment #1 - Team SoL
+# COMP 4711 - Assignment #2 - Team SoL
 #
 # Members:
 #       Michael Chodolak
@@ -11,35 +11,50 @@
 #       https://github.com/SoL-Photo/SoL
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-IMPORTANT:
+IMPORTANT NOTES:
 ================================================================================
-To populate the tables in the database please run the "tables_setup.sql" script.
+To populate the tables in the database please run the "tables_setup.sql" script
+which is located in the "scripts" folder (at same level as "application" folder).
+Our database name is "SoL_Photography".
+
+One of the merges we did on Saturday overwrote many changes we had done and we
+were not able to revert the merge.  In the end, we had to do a hard reset and 
+rollback to a previous commit state.  As a result, if you look at the graph in
+Github it will look like not everyone contributed evenly, but this is not the
+case.
+
 
 Assignment Two Updates
 ================================================================================
--photos are now stored in the photos table in the database
+- all photos have now been added to the Photos table in the database
 
--blogs are now stored in the blogposts table in the database
+- blog posts are now stored in the Blogposts table in the database
 
--most views are based off a template and we have removed the majority of extra html
+- most views are based off a template and we have removed the majority of extra html
 
--controllers have been made for all the views
+- controllers have been made for all the views
 
--created an admin page
+- created an admin page
 
--blogs can be added/deleted from the admin page 
+- blog posts can be added/deleted from the admin page 
 
--blogs being added use CKEditor rich text
+- the content of a blog post can be added using the CKEditor rich text editor
 
--photos can be added/deleted from the admin page
+- photos can be added/deleted from the admin page
 
--login/registration has been added
+- login view has been added
 
-TODO:
 
--conformation on adding/deleting photos/blogs
+TO DO:
 
--no login conformation
+- let user know they were successful in adding/deleting photos/blogs
+- login authentication
+
+NOT WORKING:
+
+- can't edit posts/photos; it just adds a new one to the database table
+- file uploading not working
+
 
 Assignment One Notes
 ================================================================================
