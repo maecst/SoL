@@ -7,9 +7,11 @@
     <!--Content(uses blogcontent id instead of content id)-->
     <div id="blogcontent">
         
-        <!--Blog post sample 1: table -->
-        <div class="blogpost">
+        <!-- dynamically loaded dummy blog posts from the database -->
             {post}
+      
+        <!-- the original static blog posts -->
+        <div class="blogpost">
             <p>Friday, January 31, 2014</p>
 
             <p> I thought I'd share with you today what sort of gear I have in my camera bags -- yes, bags plural:).  </p>
@@ -82,7 +84,7 @@ Mauris a velit in risus tincidunt vestibulum id sed leo. Aliquam lobortis tristi
             <p>Tuesday, December 21, 2013</p>
 
             <figure>
-                <img src="images/blogImage1.jpg" alt="dusty miller" width="476" height="322">
+                <img src="/assets/images//blogImage1.jpg" alt="dusty miller" width="476" height="322">
                 <figcaption>Dusty Miller, Q.E. Park, Vancouver</figcaption>
             </figure>
 
@@ -102,7 +104,7 @@ Mauris a velit in risus tincidunt vestibulum id sed leo. Aliquam lobortis tristi
             <p>Wednesday, October 30, 2013</p>
 
             <figure>
-                <img src="images/blogImage2.jpg" alt="red maple leaf" width="496" height="628">
+                <img src="/assets/images//blogImage2.jpg" alt="red maple leaf" width="496" height="628">
                 <figcaption>True North, Strong and Free</figcaption>
             </figure>
 
@@ -125,22 +127,6 @@ Fusce id dictum tortor. Sed porttitor lacus ac magna consectetur posuere. Phasel
             </div>
 
         </div>
-
-        <!--Blog post-->
-        <div class="blogpost">
-            <p style="text-align: center; font-size: 4em; font-weight: bold; color: #aaaaaa;">blog post</p>
-        </div>
-
-        <!--Blog post-->
-        <div class="blogpost">
-            <p style="text-align: center; font-size: 4em; font-weight: bold; color: #aaaaaa;">blog post</p>
-        </div>
-
-        <!--Footer 
-        <div id="footer">
-            <p>Copyright &copy; 2014 Sliver of Light Photography</p>
-        </div>
-        -->
 
     </div>
 

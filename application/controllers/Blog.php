@@ -45,13 +45,14 @@ class Blog extends Application {
 	public function index()
 	{
             //Grabs blot posts information from database and puts it into array.
-            $this->db->where('id', 1);
+            //$this->db->where('id', 1);
+            $this->db->order_by('postdate', 'desc');
             $query = $this->db->get("blogposts");
             $post = $query->result_array();
             
             //Parses the database information into a cell array.
             foreach ($post as $content) {
-                $cells[] = $this->parser->parse('post', (array) $content, true);
+                $cells[] = $this->parser->parse('_post', (array) $content, true);
             }
             
             //Sets up and puts the picture information into a link.

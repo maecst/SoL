@@ -218,6 +218,22 @@ class Admin extends Application {
         
         redirect('/admin');
     }
+    
+    function edit_blogpost($id) {
+        
+        $post = $this->posts->get($id);
+        $this->posts->update($post);
+        $this->present_blogpost($post);
+    }
+    
+    function del_blogpost($id) {
+        
+        if (exists($id)) {
+            echo 'Yay, post #' . $id . ' exists.';
+            $this->posts->delete($id);
+        }
+        
+    }
 }
 
 /* End of file Admin.php */

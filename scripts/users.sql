@@ -32,23 +32,23 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(128) NOT NULL,
   `password` varchar(128) NOT NULL,
   `confirmpass` varchar(128) NOT NULL,
-  `role` varchar(32) DEFAULT 'USER',  --will limit to admin or user for now
+  `role` varchar(32) DEFAULT 'USER',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `images`
+-- Dumping data for table `users`
 --
 
 
 INSERT INTO `users` 
-(`id`, `firstname`, `lastname`, `email`, `password`, `confirmpass`,  `role`) 
+(`firstname`, `lastname`, `email`, `password`, `confirmpass`, `role`) 
 VALUES
-  (1   'Henry', 'Tan', 'hkitannn@gmail.com', 'totallyencryptedpassword', 'totallyencryptedpassword', 'USER')
-, (2   'Mae', 'Yee', 'mae.cst@hotmail.com', 'sliveroflight', 'sliveroflight', 'ADMIN')
-, (3   'Michael', 'Chodolak', 'chodolak@gmail.com', 'damnthatsinteresting','damnthatsinteresting', 'USER')
-, (4   'Stephanie', 'Lachapelle', 'steph-lachapelle@hotmail.com', 'vidyagames',, 'vidyagames' 'USER')
-, (5   'Jim', 'Parry', 'jlparry@jlparry.com', 'codeignilumminati', 'codeignilumminati', 'USER')
+  ('Henry', 'Tan', 'hkitannn@gmail.com', 'totallyencryptedpassword', 'totallyencryptedpassword', 'USER')
+, ('Mae', 'Yee', 'mae.cst@hotmail.com', 'sliveroflight', 'sliveroflight', 'ADMIN')
+, ('Michael', 'Chodolak', 'chodolak@gmail.com', 'damnthatsinteresting','damnthatsinteresting', 'USER')
+, ('Stephanie', 'Lachapelle', 'steph-lachapelle@hotmail.com', 'vidyagames', 'vidyagames', 'USER')
+, ('Jim', 'Parry', 'jlparry@jlparry.com', 'codeignilumminati', 'codeignilumminati', 'USER')
 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
