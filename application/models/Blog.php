@@ -12,16 +12,16 @@ class Blog extends CI_Model {
     function all() {
         
         $this->db->order_by("id", "desc");
-        $query = $this->db->get('title');
+        $query = $this->db->get('blogposts');
         return $query->result_array();
     }
     
-    // return the 6 newest blog posts
+    // return the 3 newest blog posts
     function newest() {
         
         $this->db->order_by("id", "desc");
-        $this->db->limit(6);
-        $query = $this->db->get('id');
+        $this->db->limit(3);
+        $query = $this->db->get('blogposts');
         return $query->result_array();
     }
     

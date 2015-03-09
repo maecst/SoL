@@ -57,7 +57,7 @@ class Blog extends Application {
             //Sets up and puts the picture information into a link.
             $this->load->library('table');
             $parms = array(
-                'table_open' => '<a class="gallery">',
+                'table_open' => '',
                 "cell_start" => '<td class="oneimage">',
                 "cell_alt_start" => '<td class="oneimage">'
                 );
