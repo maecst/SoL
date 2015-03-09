@@ -36,6 +36,7 @@ Assignment Two Updates
 -login/registration has been added
 
 TODO:
+
 -conformation on adding/deleting photos/blogs
 
 -no login conformation
