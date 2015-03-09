@@ -4,7 +4,7 @@
 	<!-- sign in -->
 	<h2>Member Sign In</h2>
 	<div id="signInContainer">
-		<form id="signInForm" method="post" action="http://www.cstprogram.ca/sliver/index.php">
+		<form id="signInForm" method="post" action="/admin">
 			<label for="email">Email:</label>		
 			<input class="userinput" type="text" id="email" name="email" placeholder="myEmail@mailMeStuff.com">
 
