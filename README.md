@@ -31,7 +31,7 @@ TODO:
 -conformation on adding/deleting photos/blogs
 -no login conformation
 
-Assignemnt 1 Notes
+Assignment One Notes
 ================================================================================
 
 1) We created a database and populated the Photos table with 10 nature photos.  The
