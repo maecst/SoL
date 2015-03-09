@@ -18,17 +18,27 @@ To populate the tables in the database please run the "tables_setup.sql" script.
 Assignment Two Updates
 ================================================================================
 -photos are now stored in the photos table in the database
+
 -blogs are now stored in the blogposts table in the database
+
 -most views are based off a template and we have removed the majority of extra html
+
 -controllers have been made for all the views
+
 -created an admin page
+
 -blogs can be added/deleted from the admin page 
+
 -blogs being added use CKEditor rich text
+
 -photos can be added/deleted from the admin page
+
 -login/registration has been added
+
 
 TODO:
 -conformation on adding/deleting photos/blogs
+
 -no login conformation
 
 Assignment One Notes
