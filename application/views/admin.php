@@ -32,8 +32,8 @@
                 <td>{postdate}</td>
                 <td>{title}</td>
                 <td><div class="edit-del">
-                        <a href="/assets/admin/edit/{id}"><img src="/assets/images/icon_edit.png"></a>
-                        <a href="/assets/admin/edit/{id}"><img src="/assets/images/icon_delete.png"></a>
+                        <a href="/admin/edit_blogpost/{id}"><img src="/assets/images/icon_edit.png"></a>
+                        <a href="/admin/del_blogpost/{id}"><img src="/assets/images/icon_delete.png"></a>
                     </div>
                 </td>
             </tr>
@@ -70,8 +70,8 @@
                 <td>{date_taken}</td>
                 <td>{foldername}</td>
                 <td><div class="edit-del">
-                        <a href="/assets/admin/edit/{id}"><img src="/assets/images/icon_edit.png"></a>
-                        <a href="/assets/admin/edit/{id}"><img src="/assets/images/icon_delete.png"></a>
+                        <a href="/admin/edit_photo/{id}"><img src="/assets/images/icon_edit.png"></a>
+                        <a href="/admin/del_photo/{id}"><img src="/assets/images/icon_delete.png"></a>
                     </div>
                 </td>
             </tr>

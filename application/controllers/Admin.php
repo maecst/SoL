@@ -26,6 +26,7 @@ class Admin extends Application {
        $this->present_photo($photo);
     }
     
+    // edit a photo
     function edit_photo() {
         $photo = $this->photos->get();
         $this->photos->update();
@@ -51,19 +52,6 @@ class Admin extends Application {
             'people'     => 'People',
             'places'     => 'Places'
         );
-
-//        $this->upload->initialize($config);
-//        $success = $this->upload->do_upload($photo);
-//        
-//        //get profile image's save path for the db
-//        $profilePhoto = "";
-//        if($success){
-//            $fullPath = $this->upload->data('full_path');
-//            $fileName = substr($fullPath, mb_strrpos($fullPath, "/")+1, strlen($fullPath));
-//            $profilePhoto = "/uploads/" . $username . "/" . $fileName;
-//        }else{
-//            $profilePhoto = $user["userpicture"];
-//        }
         
         $this->data['message'] = $message;
         $this->data['f_pid'] = makeTextField('Photo ID #', 'id', $photo->id, 
@@ -102,12 +90,12 @@ class Admin extends Application {
         $record->filename = $this->input->post('filename');
         
         // validate that author is provided
-//        if (empty($record->folder)) {
-//            $this->errors[] = 'You must specify the name of the folder where the photo will be saved.';
-//        }
-//        if (empty($record->category)) {
-//            $this->errors[] = 'You must specify the name of the Gallery where the photo will be displayed.';
-//        }
+        if (empty($record->foldername)) {
+            $this->errors[] = 'You must specify the name of the folder where the photo will be saved.';
+        }
+        if (empty($record->category)) {
+            $this->errors[] = 'You must specify the name of the Gallery where the photo will be displayed.';
+        }
         
         // redisplay if there are any errors
         if (count($this->errors) > 0) {
@@ -125,6 +113,7 @@ class Admin extends Application {
         redirect('/admin');
     }
     
+    // upload a file
     function do_upload($photo) {
         //configure uploader
         $config['upload_path'] = '/uploads/images/' . $photo->folder . '/';
@@ -146,6 +135,14 @@ class Admin extends Application {
         }
     }
     
+    // delete a photo
+    function del_photo($id) {
+        
+        if ($this->photos->exists($id)) {
+            $this->photos->delete($id);
+        }
+        redirect('/admin');
+    }
     
     // add a new post to the blog
     function add_blogpost() {
@@ -162,9 +159,10 @@ class Admin extends Application {
             foreach ($this->errors as $booboo) {
                 $message .= $booboo . BR;
             }
+            $message .= BR;
         }
         
-        // present photo info
+        // present blog post info
         $today = date("Y-m-d");
         $post->date = $today;
         
@@ -185,8 +183,9 @@ class Admin extends Application {
         $this->render();
     }
     
-    // process a photo edit
+    // process a blog post edit
     function submit_post() {
+
         $record = $this->posts->create();
         
         // extract submitted fields
@@ -195,13 +194,13 @@ class Admin extends Application {
         $record->title = $this->input->post('post_title');
         $record->content = $this->input->post('post_content');
         
-        // validate that author is provided
-//        if (empty($record->post_title)) {
-//            $this->errors[] = 'You must add a title for the post.';
-//        }
-//        if (empty($record->post_content)) {
-//            $this->errors[] = 'You cannot submit an empty blog post.';
-//        }
+        // validate that blog title and content fields aren't empty
+        if (empty($record->title)) {
+            $this->errors[] = 'You must add a title for the post.';
+        }
+        if (empty($record->content)) {
+            $this->errors[] = 'You cannot submit an empty blog post.';
+        }
         
         // redisplay if there are any errors
         if (count($this->errors) > 0) {
@@ -216,6 +215,26 @@ class Admin extends Application {
             $this->posts->update($record);
         }
         
+        redirect('/admin');
+    }
+    
+    // edit a blog post
+    function edit_blogpost($id) {
+        
+        if ($this->posts->exists($id)) {
+            $post = $this->posts->get($id);
+            
+            $this->present_blogpost($post);
+        }
+
+    }
+    
+    // delete a blog post
+    function del_blogpost($id) {
+        
+        if ($this->posts->exists($id)) {
+            $this->posts->delete($id);
+        }
         redirect('/admin');
     }
 }
