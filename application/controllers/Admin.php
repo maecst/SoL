@@ -102,12 +102,12 @@ class Admin extends Application {
         $record->filename = $this->input->post('filename');
         
         // validate that author is provided
-//        if (empty($record->folder)) {
-//            $this->errors[] = 'You must specify the name of the folder where the photo will be saved.';
-//        }
-//        if (empty($record->category)) {
-//            $this->errors[] = 'You must specify the name of the Gallery where the photo will be displayed.';
-//        }
+        if (empty($record->foldername)) {
+            $this->errors[] = 'You must specify the name of the folder where the photo will be saved.';
+        }
+        if (empty($record->category)) {
+            $this->errors[] = 'You must specify the name of the Gallery where the photo will be displayed.';
+        }
         
         // redisplay if there are any errors
         if (count($this->errors) > 0) {
@@ -149,7 +149,7 @@ class Admin extends Application {
     function del_photo($id) {
         
         if ($this->photos->exists($id)) {
-            echo 'Yay, photo #' . $id . ' exists.';
+
             $this->photos->delete($id);
         }
         redirect('/admin');
@@ -170,6 +170,7 @@ class Admin extends Application {
             foreach ($this->errors as $booboo) {
                 $message .= $booboo . BR;
             }
+            $message .= BR;
         }
         
         // present photo info
@@ -195,6 +196,7 @@ class Admin extends Application {
     
     // process a photo edit
     function submit_post() {
+
         $record = $this->posts->create();
         
         // extract submitted fields
@@ -204,12 +206,12 @@ class Admin extends Application {
         $record->content = $this->input->post('post_content');
         
         // validate that author is provided
-//        if (empty($record->post_title)) {
-//            $this->errors[] = 'You must add a title for the post.';
-//        }
-//        if (empty($record->post_content)) {
-//            $this->errors[] = 'You cannot submit an empty blog post.';
-//        }
+        if (empty($record->title)) {
+            $this->errors[] = 'You must add a title for the post.';
+        }
+        if (empty($record->content)) {
+            $this->errors[] = 'You cannot submit an empty blog post.';
+        }
         
         // redisplay if there are any errors
         if (count($this->errors) > 0) {
@@ -230,12 +232,9 @@ class Admin extends Application {
     function edit_blogpost($id) {
         
         if ($this->posts->exists($id)) {
-            echo 'Yay, post #' . $id . ' exists.';
             $post = $this->posts->get($id);
             
             $this->present_blogpost($post);
-            
-            $this->posts->update($post);
         }
 
     }
@@ -243,7 +242,6 @@ class Admin extends Application {
     function del_blogpost($id) {
         
         if ($this->posts->exists($id)) {
-            echo 'Yay, post #' . $id . ' exists.';
             $this->posts->delete($id);
         }
         redirect('/admin');
