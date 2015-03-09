@@ -6,11 +6,10 @@
 
     <!--Content(uses blogcontent id instead of content id)-->
     <div id="blogcontent">
-
-
+        
         <!--Blog post sample 1: table -->
         <div class="blogpost">
-
+            {post}
             <p>Friday, January 31, 2014</p>
 
             <p> I thought I'd share with you today what sort of gear I have in my camera bags -- yes, bags plural:).  </p>
