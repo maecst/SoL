@@ -13,8 +13,8 @@
         
     </span>
 
-<!--
-    <table cols="" border="0">
+<div class="admin_table">
+    <table id="list_photos">
         <tr>
             <th>ID</th>
             <th>Upload Date</th>
@@ -23,22 +23,30 @@
             <th>Location</th>
             <th>Date Taken</th>
             <th>Folder</th>
-            <th>Gallery</th>
+            <th>Edit/Del</th>
+
         </tr>
         {photos}
         <tr>
             <td>{id}</td>
             <td>{upload_date}</td>
-            <td>{filename}</td>
+            <td> <img src="/assets/images/{foldername}/thumb_{filename}" 
+             width="60" height="60"
+             class="thumb trans1">
+            </td>
             <td>{description}</td>
             <td>{location}</td>
             <td>{date_taken}</td>
             <td>{foldername}</td>
-            <td>{category}</td>
-
+            <td><div class="edit-del">
+                    <a href="/assets/admin/edit/{id}"><img src="/assets/images/icon_edit.png"></a>
+                    <a href="/assets/admin/edit/{id}"><img src="/assets/images/icon_delete.png"></a>
+                </div>
+            </td>
         </tr>
         {/photos}
     </table>
--->    
+</div>
+  
 </div>
 

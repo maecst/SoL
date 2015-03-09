@@ -296,6 +296,34 @@ in the future without messing everything up.*/
 
 /*================================================== ADMIN ======================================================================*/
 
+.edit-del img {
+	height: 20px;
+	padding: 5px;
+	display: inline;
+}
+
+#list_photos {
+    font-size: 12pt;
+}
+
+.admin_table {
+margin: auto;
+padding: 5px 0px;
+width: 100%;
+display: block;
+}
+
+#list_photos table {
+	text-align: center;
+	border-collapse: collapse;
+	table-layout: fixed;
+	font-family: Calibri, sans-serif;
+}
+
+#list_photos tr{
+    border-bottom: 1px dashed #bbbbbb;
+}
+
 
 /*================================================== BLOG ======================================================================*/
 
@@ -402,6 +430,7 @@ margin: auto;
 padding: 10px 100px;
 display: block;
 }
+
 table {
 	text-align: center;
 	border-collapse: collapse;
