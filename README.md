@@ -11,8 +11,37 @@
 #       https://github.com/SoL-Photo/SoL
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+IMPORTANT:
+================================================================================
+To populate the tables in the database please run the "tables_setup.sql" script.
 
-NOTES:
+Assignment Two Updates
+================================================================================
+-photos are now stored in the photos table in the database
+
+-blogs are now stored in the blogposts table in the database
+
+-most views are based off a template and we have removed the majority of extra html
+
+-controllers have been made for all the views
+
+-created an admin page
+
+-blogs can be added/deleted from the admin page 
+
+-blogs being added use CKEditor rich text
+
+-photos can be added/deleted from the admin page
+
+-login/registration has been added
+
+~~~~~~~~~
+TODO:
+-conformation on adding/deleting photos/blogs
+
+-no login conformation
+
+Assignment One Notes
 ================================================================================
 
 1) We created a database and populated the Photos table with 10 nature photos.  The
@@ -26,8 +55,6 @@ It is located in the SoL/scripts/ folder.
 
 3) The original web site has been put entirely inside the SoL/public/ folder or 
 you can view the hosted version at http://www.cstprogram.ca/sliver
-
-
 
 USE CASES:
 ================================================================================
