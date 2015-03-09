@@ -45,7 +45,7 @@ class Blog extends Application {
 	public function index()
 	{
             //Grabs blot posts information from database and puts it into array.
-            $this->db->where('id' > 0);
+            $this->db->where('id', 1);
             $query = $this->db->get("blogposts");
             $post = $query->result_array();
             
