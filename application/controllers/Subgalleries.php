@@ -38,8 +38,8 @@ class Subgalleries extends Application {
         $this->data['firstName'] = "Places";
         $this->data['secondLocation'] = "nature";
         $this->data['secondName'] = "Nature";
-        $this->data['thirdLocation'] = "Black & White";
-        $this->data['thirdName'] = "blackwhite";
+        $this->data['thirdLocation'] = "blackwhite";
+        $this->data['thirdName'] = "Black & White";
         
         //Renders body.
         $this->data['pagebody'] = 'subgalleries';
