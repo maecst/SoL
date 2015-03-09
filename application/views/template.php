@@ -29,10 +29,14 @@ if (!defined('APPPATH'))
         <script src="/assets/js/blog.js" language="javascript" type="text/javascript"></script>
         <script src="/assets/js/jquery-1.11.1.min.js" language="javascript" type="text/javascript"></script>
         <script src="/assets/js/bootstrap.min.js" language="javascript" type="text/javascript"></script>
+        
         <!-- Slimbox2 scripts & style -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
         <script src="/assets/js/slimbox2.js" type="text/javascript"></script>
-        <link href="/assets/css/slimbox2.css" rel="stylesheet"  type="text/css" media="screen" />   
+        <link href="/assets/css/slimbox2.css" rel="stylesheet"  type="text/css" media="screen" /> 
+        
+        <!-- CKEditor script -->
+        <script src="/ckeditor/ckeditor.js"></script>
                 
     </head>
 

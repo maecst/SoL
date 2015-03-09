@@ -302,7 +302,7 @@ in the future without messing everything up.*/
 	display: inline;
 }
 
-#list_photos {
+#list_photos, #list_blogposts {
     font-size: 12pt;
 }
 
@@ -313,14 +313,14 @@ width: 100%;
 display: block;
 }
 
-#list_photos table {
+#list_photos table, #list_blogposts table {
 	text-align: center;
 	border-collapse: collapse;
 	table-layout: fixed;
 	font-family: Calibri, sans-serif;
 }
 
-#list_photos tr{
+#list_photos tr, #list_blogposts tr{
     border-bottom: 1px dashed #bbbbbb;
 }
 

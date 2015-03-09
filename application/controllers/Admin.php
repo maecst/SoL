@@ -138,7 +138,7 @@ class Admin extends Application {
         
         if (! $this->upload->do_upload()) {
             $error = array('error' => $this->upload->display_errors());
-            $this->load->view('upload_form', $error);
+            $this->load->view('photo_edit', $error);
             
         } else {
             $data = array('upload_data' => $this->upload->data());
