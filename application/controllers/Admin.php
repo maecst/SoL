@@ -146,6 +146,14 @@ class Admin extends Application {
         }
     }
     
+    function del_photo($id) {
+        
+        if ($this->photos->exists($id)) {
+            echo 'Yay, photo #' . $id . ' exists.';
+            $this->photos->delete($id);
+        }
+        redirect('/admin');
+    }
     
     // add a new post to the blog
     function add_blogpost() {
@@ -221,18 +229,24 @@ class Admin extends Application {
     
     function edit_blogpost($id) {
         
-        $post = $this->posts->get($id);
-        $this->posts->update($post);
-        $this->present_blogpost($post);
+        if ($this->posts->exists($id)) {
+            echo 'Yay, post #' . $id . ' exists.';
+            $post = $this->posts->get($id);
+            
+            $this->present_blogpost($post);
+            
+            $this->posts->update($post);
+        }
+
     }
     
     function del_blogpost($id) {
         
-        if (exists($id)) {
+        if ($this->posts->exists($id)) {
             echo 'Yay, post #' . $id . ' exists.';
             $this->posts->delete($id);
         }
-        
+        redirect('/admin');
     }
 }
 
