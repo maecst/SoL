@@ -90,10 +90,10 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 //Routes for subgalleries
-$route['people'] = "Subgalleries/people";
-$route['nature'] = "Subgalleries/nature";
-$route['places'] = "Subgalleries/places";
-$route['blackwhite'] = "Subgalleries/blackwhite";
+$route['people'] = "subgalleries/people";
+$route['nature'] = "subgalleries/nature";
+$route['places'] = "subgalleries/places";
+$route['blackwhite'] = "subgalleries/blackwhite";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
