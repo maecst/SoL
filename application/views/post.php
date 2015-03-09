@@ -27,7 +27,7 @@ Converted to be a new view fragment template for the photo galleries
              alt="{category} Gallery">
 </a>-->
 
-<h3>{title}</h3>
-<p><italics>{postdate}</italics></p><br>
+<h3 style="padding-left:40px">{title}</h3>
+<p><i>{postdate}</i></p>
 <p>{content}</p>
-<br><br>
+<br>
