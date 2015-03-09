@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This is a "CMS" model for blogposts.
+ * This is a "CMS" model for photos.
  *
  * @author Mae
  */
@@ -28,41 +28,4 @@ class Photos extends MY_Model {
         $query = $this->db->get('photos');
         return $query->result_array();
     }
-    
-    // insert a new photo into the Photos table
-    function add_new_photo() {
-//        $this->upload_date = time();
-//        $this->id = 0;
-//        $this->folder = $this->input->post('foldername');
-//        $this->filename = $this->input->post('filename');
-//        $this->thumbnail = $this->input->post('thumb_' . $this->filename);
-//        $this->description = $this->input->post('description');
-//        $this->location = $this->input->post('location');
-//        $this->date_taken = $this->input->post('date_taken');
-//        $this->category = $this->input->post('category');
-//        
-//        $this->db->insert('photos', $this); 
-    }
-    
-    // insert a new photo into the Photos table
-    function edit_photo() {
-//        $this->upload_date = time();
-//        $this->folder = $this->input->post('foldername');
-//        $this->filename = $this->input->post('filename');
-//        $this->thumbnail = $this->input->post('thumb_' + $this->filename);
-//        $this->description = $this->input->post('description');
-//        $this->location = $this->input->post('location');
-//        $this->date_taken = $this->input->post('date_taken');
-//        $this->category = $this->input->post('category');
-//        
-//        $this->db->update('photos', $this, array('id' => $this->input->post('photo_id'))); 
-    }
-    
-    // delete a photo from the Photos table
-    function delete_photo() {
-        
-        
-    }
-    
-    
 }
