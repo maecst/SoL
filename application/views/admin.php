@@ -5,12 +5,7 @@
     <br>
     <span id="gallerynav">
         [ <a href='/admin/add_photo'>Add a new photo</a> ] &nbsp;&nbsp;
-   <!-- [ <a href='/admin/edit_photo'>Edit a photo</a> ] &nbsp;&nbsp;
-        [ <a href='/admin/delete_photo'>Delete a photo</a> ] -->
-        [ <a href='/admin/add_blogpost'>Add a new blog post</a> ] &nbsp;&nbsp;
-   <!-- [ <a href='/admin/edit_blog'>Edit a blog post</a> ] &nbsp;&nbsp;
-        [ <a href='/admin/delete_blog'>Delete a blog post</a> ] -->
-        
+        [ <a href='/admin/add_blogpost'>Add a new blog post</a> ] &nbsp;&nbsp;        
     </span>
     
     <div class="admin_table">
@@ -20,7 +15,7 @@
             <col width="60%">
             <col width="10%">
             <tr>
-                <th >ID</th>
+                <th>ID</th>
                 <th>Post Date</th>
                 <th>Title</th>
                 <th>Edit/Del</th>

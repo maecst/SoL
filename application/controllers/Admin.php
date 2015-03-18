@@ -114,7 +114,7 @@ class Admin extends Application {
     }
     
     // upload a file
-    function do_upload($photo) {
+    function upload_file($photo) {
         //configure uploader
         $config['upload_path'] = '/uploads/images/' . $photo->folder . '/';
         $config['allowed_types'] = 'gif|jpg|png';
