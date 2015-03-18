@@ -173,7 +173,7 @@ $autoload['language'] = array();
 |	$autoload['model'] = array('first_model' => 'first');
 */
 
-$autoload['model'] = array('photos');
+$autoload['model'] = array('photos', 'posts', 'folders');
 
 
 /* End of file autoload.php */

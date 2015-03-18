@@ -1,41 +1,68 @@
-            <!--This div is needed to get overflow working properly.-->
-            <div id="content">
-            <!-- div id="blogcontainer" -->
+<!--This div is needed to get overflow working properly.-->
+<div id="content">
+<!-- div id="blogcontainer" -->
 
-                <h2>Blog</h2>
+    <h2>Blog</h2>
 
-                <!--Content(uses blogcontent id instead of content id)-->
-                <div id="blogcontent">
+    <!--Content(uses blogcontent id instead of content id)-->
+    <div id="blogcontent">
+        
+        <!-- dynamically loaded dummy blog posts from the database -->
+            {post}
+      
+        <!-- the original static blog posts -->
+        <div class="blogpost">
+            <p>Friday, January 31, 2014</p>
 
+            <p> I thought I'd share with you today what sort of gear I have in my camera bags -- yes, bags plural:).  </p>
 
-                    <!--Blog post sample 1: table -->
-                    <div class="blogpost">
+            <div class="table">
+            <table>
+                <tr>
+                    <th> Bodies </th>
+                    <th> Lenses </th>
+                </tr>
+                <tr>
+                    <td> Canon EOS 7D </td>
+                    <td> Canon EF-S 10-22mm f/3.5 USM </td>
+                </tr>
+                <tr>
+                    <td> Canon EOS 40D </td>
+                    <td> Canon EF 50mm f/1.4 USM </td>
+                </tr>
+                <tr>
+                    <td> Canon AE-1 Program </td>
+                    <td> Canon EF 135 f/2L USM </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> Canon EF 24-105mm f/4L IS USM </td>
 
-                        <p>Friday, January 31, 2014</p>
-
-                        <p> I thought I'd share with you today what sort of gear I have in my camera bags -- yes, bags plural:).  </p>
-
-                        <div class="table">
-                        <table>
-                            <tr>
-                                <th> Bodies </th>
-                                <th> Lenses </th>
-                            </tr>
-                            <tr>
-                                <td> Canon EOS 7D </td>
-                                <td> Canon EF-S 10-22mm f/3.5 USM </td>
-                            </tr>
-                            <tr>
-                                <td> Canon EOS 40D </td>
-                                <td> Canon EF 50mm f/1.4 USM </td>
-                            </tr>
-                            <tr>
-                                <td> Canon AE-1 Program </td>
-                                <td> Canon EF 135 f/2L USM </td>
-                            </tr>
-                            <tr>
-                                <td> </td>
-                                <td> Canon EF 24-105mm f/4L IS USM </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> Canon EF 70-200mm f/4L IS USM </td>
+                </tr>
+                <tr>
+                    <th colspan="2"> Accessories </th>
+                </tr>
+                <tr>
+                    <td colspan="2"> Canon Speedlite 580EX II flash </td>
+                </tr>
+                <tr>
+                    <td colspan="2"> Manfrotto 728B Digi tripod </td>
+                </tr>
+                <tr>
+                    <td colspan="2"> light diffusers </td>
+                </tr>
+                <tr>
+                    <td colspan="2"> polarizing & ND filters </td>
+                </tr>
+                <tr>
+                    <td colspan="2"> remote shutter releases </td>
+                </tr>
+            </table>
+            </div>
 
                             </tr>
                             <tr>
@@ -142,6 +169,6 @@
                         <p>Copyright &copy; 2014 Sliver of Light Photography</p>
                     </div>
 
-                </div>
+    </div>
 
-            </div>
+</div>

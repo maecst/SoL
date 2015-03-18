@@ -1,7 +1,12 @@
 <?php
 
-class Photos extends CI_Model {
-    
+/**
+ * This is a "CMS" model for photos.
+ *
+ * @author Mae
+ */
+class Photos extends MY_Model {
+       
     // constructor
     function __construct() {
         
@@ -23,6 +28,5 @@ class Photos extends CI_Model {
         $this->db->limit(6);
         $query = $this->db->get('photos');
         return $query->result_array();
-        
     }
 }
