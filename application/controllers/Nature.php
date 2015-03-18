@@ -37,42 +37,41 @@
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends Application {
+class Nature extends Application {
 
 	/**
 	 * Index Page for this controller.
 	 */
 	public function index()
-    {
-
-        //Grabs the 6 newest photos from the database.
-        $pix = $this->photos->newest();
+	{
+            //Grabs photo information from database and puts it into array.
+            $query = $this->db->get("photos");
+            $pictures = $query->result_array();
             
-        //Parses the database information into a cell array.
-        foreach($pix as $picture)
-        {
-            $cells[] = $this->parser->parse('_cell', (array) $picture, true);
-        }
-        
-        //Sets up and puts the picture information into a link.
-        $this->load->library('table');
-        $params = array(
-            'table_open' => '<a class="gallery">',
-            'cell_start' => '<td class="oneimage">',
-            'cell_alt_start' => '<td class="oneimage">'
-        );
-
-        $this->table->set_template($params);
-        $rows = $this->table->make_columns($cells, 6);
-        
-        //Generates pictures in the location.
-        $this->data['images'] = $this->table->generate($rows);
-
-        //Renders body.
-        $this->data['pagebody'] = 'welcome';
-        $this->render();
-    }
+            //Parses the database information into a cell array.
+            foreach ($pictures as $picture) {
+                $cells[] = $this->parser->parse('_cell', (array) $picture, true);
+            }
+            
+            //Sets up and puts the picture information into a link.
+            $this->load->library('table');
+            $parms = array(
+                'table_open' => '<a class="gallery">',
+                "cell_start" => '<td class="oneimage">',
+                "cell_alt_start" => '<td class="oneimage">'
+                );
+            $this->table->set_template($parms);
+            
+            $rows = $this->table->make_columns($cells, 6);
+            
+            //Generates pictures in the location.
+            $this->data['thetable'] = $this->table->generate($rows);
+            
+            //Renders body.
+            $this->data['pagebody'] = 'nature';
+            $this->render();
+	}
 }
 
-/* End of file welcome.php */
-/* Location: ./application/controllers/Welcome.php */
+/* End of file nature.php */
+/* Location: ./application/controllers/Nature.php */

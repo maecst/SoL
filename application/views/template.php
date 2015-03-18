@@ -1,25 +1,14 @@
-<?php
-if (!defined('APPPATH'))
-    exit('No direct script access allowed');
-/**
- * views/template.php
- *
- * Pass in $pagetitle (which will in turn be passed along)
- * and $pagebody, the name of the content view.
- *
- * ------------------------------------------------------------------------
- */
-?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <title> {pagetitle} </title>
-        <link href="/assets/css/base.css" rel="stylesheet" media="screen">
-        <link href="/assets/css/baseprint.css" rel="stylesheet"  media="print">
-        <link href="/assets/images/favicon.png" rel="icon" type="image/png" >
-        <link href="/assets/css/bootstrap.min.css" rel="stylesheet"  media="screen"/>
+        <link rel="stylesheet" href="style/base.css" media="screen">
+        <link rel="stylesheet" href="style/baseprint.css" media="print">
+        <link rel="icon" type="image/png" href="images/favicon.png">
         
+        <script language="javascript" type="text/javascript" src="js/blog.js"></script>
+
 <!--    Not sure these scripts are needed...    
         <script src="js/lightbox-2.6.min.js"></script>
         <script src="js/jquery-1.10.2.min.js"></script>
@@ -106,6 +95,6 @@ if (!defined('APPPATH'))
                 <p>Copyright &copy; 2014 Sliver of Light Photography</p>
             </div>
 
-        </div>        
+        </div>
     </body>
 </html>
