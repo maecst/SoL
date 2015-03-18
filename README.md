@@ -1,5 +1,5 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#  COMP 4711 - Assignment #1 - Team SoL
+# COMP 4711 - Assignment #2 - Team SoL
 #
 # Members:
 #       Michael Chodolak
@@ -11,8 +11,52 @@
 #       https://github.com/SoL-Photo/SoL
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+IMPORTANT NOTES:
+================================================================================
+To populate the tables in the database please run the "tables_setup.sql" script
+which is located in the "scripts" folder (at same level as "application" folder).
+Our database name is "SoL_Photography".
 
-NOTES:
+One of the merges we did on Saturday overwrote many changes we had done and we
+were not able to revert the merge.  In the end, we had to do a hard reset and 
+rollback to a previous commit state.  As a result, if you look at the graph in
+Github it will look like not everyone contributed evenly, but this is not the
+case.
+
+
+Assignment Two Updates
+================================================================================
+- all photos have now been added to the Photos table in the database
+
+- blog posts are now stored in the Blogposts table in the database
+
+- most views are based off a template and we have removed the majority of extra html
+
+- controllers have been made for all the views
+
+- created an admin page
+
+- blog posts can be added/deleted from the admin page 
+
+- the content of a blog post can be added using the CKEditor rich text editor
+
+- photos can be added/deleted from the admin page
+
+- login view has been added
+
+
+TO DO:
+
+- let user know they were successful in adding/deleting photos/blogs
+- login authentication
+
+NOT WORKING:
+
+- can't edit posts/photos; it just adds a new one to the database table
+- file uploading not working
+
+
+Assignment One Notes
 ================================================================================
 
 1) We created a database and populated the Photos table with 10 nature photos.  The
@@ -26,8 +70,6 @@ It is located in the SoL/scripts/ folder.
 
 3) The original web site has been put entirely inside the SoL/public/ folder or 
 you can view the hosted version at http://www.cstprogram.ca/sliver
-
-
 
 USE CASES:
 ================================================================================
