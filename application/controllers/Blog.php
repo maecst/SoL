@@ -44,6 +44,30 @@ class Blog extends Application {
 	 */
 	public function index()
 	{
+            //Grabs blot posts information from database and puts it into array.
+            //$this->db->where('id', 1);
+            $this->db->order_by('postdate', 'desc');
+            $query = $this->db->get("blogposts");
+            $post = $query->result_array();
+            
+            //Parses the database information into a cell array.
+            foreach ($post as $content) {
+                $cells[] = $this->parser->parse('_post', (array) $content, true);
+            }
+            
+            //Sets up and puts the picture information into a link.
+            $this->load->library('table');
+            $parms = array(
+                'table_open' => '',
+                "cell_start" => '<td class="oneimage">',
+                "cell_alt_start" => '<td class="oneimage">'
+                );
+            $this->table->set_template($parms);
+            
+            $rows = $this->table->make_columns($cells, 6);
+            //Generates pictures in the location.
+            $this->data['post'] = $this->table->generate($rows);
+            
             //Renders pagebody.
             $this->data['pagebody'] = 'blog';
             $this->render();
