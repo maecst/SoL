@@ -3,10 +3,6 @@
     <div id="photo"></div>
     <br>
     <br>
-    <h2>Recent Photos 
-        <br>
-        <br>
+    <h2>Recent Photos</h2>
         {images}
-    </h2>
-
 </div>
