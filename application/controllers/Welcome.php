@@ -63,7 +63,7 @@ class Welcome extends Application {
         );
 
         $this->table->set_template($params);
-        $rows = $this->table->make_columns($cells, 6);
+        $rows = $this->table->make_columns($cells, 8);
         
         //Generates pictures in the location.
         $this->data['images'] = $this->table->generate($rows);
