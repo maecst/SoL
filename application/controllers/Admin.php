@@ -102,7 +102,8 @@ class Admin extends Application {
             $this->present_photo($record);
             return;                     // prevents saving
         }
-        
+        //** do upload here
+        //*** use enctype=multipsart...
         // save stuff
         if (empty($record->id)) {
             $this->photos->add($record);
@@ -151,7 +152,7 @@ class Admin extends Application {
     }
     
     // present a blog post for adding/editing function
-    function present_blogpost($post) {
+    function present_blogpost($post, $id=null) { //*** added post #
         
         // format any errors
         $message = '';
@@ -180,16 +181,17 @@ class Admin extends Application {
                 "Click here to validate the blog post", 
                 'btn-success');
         
+        $this->data['the_id'] = (!empty($id)) ? $id : '';
         $this->render();
     }
     
     // process a blog post edit
-    function submit_post() {
+    function submit_post($id=null) { // pass the identifier as part of the URL
 
         $record = $this->posts->create();
         
         // extract submitted fields
-        $record->id = $this->input->post('post_id');
+        $record->id = $id;   //*** use passed ID
         $record->postdate = $this->input->post('post_date');
         $record->title = $this->input->post('post_title');
         $record->content = $this->input->post('post_content');
@@ -224,7 +226,7 @@ class Admin extends Application {
         if ($this->posts->exists($id)) {
             $post = $this->posts->get($id);
             
-            $this->present_blogpost($post);
+            $this->present_blogpost($post,$id); // *** added id
         }
 
     }
